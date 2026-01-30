@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Signup | HMS</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: linear-gradient(135deg,#f6f9ff 0%,#eaf0ff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .signup-box, .Signup-box {
+            width: 100%;
+            max-width: 520px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 12px 30px rgba(18,35,87,0.08);
+        }
+        .signup-box h1 {
+            margin: 0 0 6px 0;
+            font-size: 22px;
+            color: #223046;
+            text-align: left;
+        }
+        .signup-box p.subtitle {
+            margin: 0 0 18px 0;
+            color: #6b7a92;
+            font-size: 13px;
+        }
+        label { display:block; font-size:13px; color:#41506a; margin-bottom:6px; }
+        .row { display:flex; gap:12px; }
+        .col { flex:1; }
+        input[type="text"], input[type="password"] {
+            width:100%; padding:10px 12px; margin-bottom:14px; border:1px solid #e6edf8; border-radius:8px; font-size:14px; background:#fbfdff;
+        }
+        input[type="text"]:focus, input[type="password"]:focus { outline:none; border-color:#6c8cff; box-shadow:0 6px 18px rgba(84,110,255,0.06); }
+        input[type="submit"] {
+            width:100%; padding:11px 14px; border:none; border-radius:8px; background:#2c6ef2; color:#fff; font-weight:600; cursor:pointer;
+        }
+        .link { text-align:center; margin-top:12px; font-size:13px; color:#5b6b8a; }
+        .link a { color:#2c6ef2; text-decoration:none; font-weight:600; }
+        @media (max-width:560px) { .row { flex-direction:column; } .signup-box{padding:18px;} }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h1>Create account</h1>
+        <p class="subtitle">Fill in the details to create your HMS account</p>
+        <form action="login_page.html" method="get">
+            <div class="row">
+                <div class="col">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="First name" required>
+                </div>
+                <div class="col">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name" required>
+                </div>
+            </div>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="Email" placeholder="you@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="Password" placeholder="Choose a strong password" required>
+
+            <input type="submit" value="Signup">
+        </form>
+        <div class="link">Already have an account? <a href="login_page.html">Login</a></div>
+    </div>
+</body>
+</html>
